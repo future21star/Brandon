@@ -1,0 +1,24 @@
+<div class="section-bg">
+	<div class="container">
+		<div class="row m-t-45">
+	    <div class="col-sm-6 col-sm-offset-3 posted">
+				<div class="well text-center ">
+					<h2 class="text-gold m-t-0 m-b-20">You're almost ready!</h2>
+					<p>
+			  		Your account has been created and a confirmation email has been sent to <b><%= @user.email %></b>. You will be able to log in once you have confirmed your email address.
+					</p>
+					<hr>
+					<p class="m-b-8">
+	  			<%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$('body').css('background-image','url(<%= asset_url('signup-successfull.jpg') %>)').addClass('bg-loaded');
+</script>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  owed: 2
+  period_start: 2016-10-03 00:00:00
+  period_end: 2016-10-09 23:59:59
+
+two:
+  user: two
+  owed: 1
+  period_start: 2016-10-03 00:00:00
+  period_end: 2016-10-09 23:59:59

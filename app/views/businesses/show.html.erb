@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @business.user_id %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @business.company_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @business.phone_number %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @business.biography %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @business.website %>
+</p>
+
+<%= link_to 'Edit', edit_business_path(@business) %> |
+<%= link_to 'Back', businesses_path %>

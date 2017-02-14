@@ -1,0 +1,16 @@
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: Quotr
+  phone_number: 15195551234
+  biography: MyText
+  website: "http://www.Quotr.ca"
+  user: one
+
+two:
+  company_name: Great White North Productions
+  phone_number: 15194964576
+  biography: MyText
+  website: 'http://www.gwnp.ca'
+  user: two

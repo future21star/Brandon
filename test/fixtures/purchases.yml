@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transaction_id: "asdasd34q34"
+  user: one
+  package: one
+  total: 1.99
+  brand: Visa
+  last_4: 0124
+  exp_month: 01
+  exp_year: 2020
+
+two:
+  transaction_id: "asdasdasdasd"
+  user: one
+  package: one
+  total: 1.99
+  brand: Mastercard
+  last_4: 4231
+  exp_month: 11
+  exp_year: 2021
+

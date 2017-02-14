@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Preferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Internal</th>
+      <th>News letters</th>
+      <th>Project events</th>
+      <th>Purchase events</th>
+      <th>Quote events</th>
+      <th>Promotions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preferences.each do |preference| %>
+      <tr>
+        <td><%= preference.email %></td>
+        <td><%= preference.internal %></td>
+        <td><%= preference.news_letters %></td>
+        <td><%= preference.project_events %></td>
+        <td><%= preference.purchase_events %></td>
+        <td><%= preference.quote_events %></td>
+        <td><%= preference.promotions %></td>
+        <td><%= link_to 'Show', preference %></td>
+        <td><%= link_to 'Edit', edit_preference_path(preference) %></td>
+        <td><%= link_to 'Destroy', preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preference', new_preference_path %>

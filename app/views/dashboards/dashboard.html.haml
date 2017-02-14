@@ -1,0 +1,44 @@
+.container
+	#notice
+		%h5= notice
+	- if current_user.is_business?
+		=link_to 'Purchase Bids', purchases_packages_path
+		.page-header
+			%h3.text-gold Bids
+		= bid_distribution(@bid_stats)
+		.page-header
+			%h3.text-gold Quotes
+		.row.grid-view
+			- @latest_quotes.each do |quote|
+				.col-sm-6.col-md-4.col-lg-3
+					.grid-box
+						%dl
+							%dt Project
+							%dd= quote[:project]
+							%dt Type
+							%dd= quote[:type]
+							%dt Date
+							%dd= quote[:date]
+						= link_to('Show', edit_quote_path(quote[:id]),:class => "btn btn-gold btn-block btn-flat")
+
+		.text-center.m-t-15.m-b-25
+			= link_to 'Full Listing', estimates_mine_path, :class => "btn btn-gold btn-flat"
+	.page-header
+		- if current_user.is_business?
+			%h3.text-gold Projects
+		-	else
+			%h1.text-gold Projects
+	.row.grid-view
+		- @latest_projects.each do |project|
+			.col-sm-6.col-md-4.col-lg-3
+				.grid-box
+					%dl
+						%dt Title
+						%dd= project[:title]
+						%dt State
+						%dd= project[:state]
+						%dt Published Date
+						%dd= project[:published]
+					= link_to('Show', project_path(project[:id]),:class => "btn btn-gold btn-block btn-flat")
+	.text-center.m-t-15.m-b-25
+		= link_to 'Full Listing', projects_mine_path, :class => "btn btn-gold btn-flat"

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Ontario
+  code: 'ON'
+  country: one
+
+two:
+  name: Alabama
+  code: 'AL'
+  country: three

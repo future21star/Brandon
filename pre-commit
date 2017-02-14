@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo 'Stashing untracked files'
+git stash -q -u --keep-index
+
+# -------------------------------
+# Tests
+# -------------------------------
+echo 'Running tests'
+rake test
+
+RESULT=$?
+echo 'Poping untracked files'
+git stash pop -q
+[ $RESULT -ne 0 ] && exit 1
+exit 0

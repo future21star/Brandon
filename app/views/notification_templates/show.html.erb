@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Summary key:</strong>
+  <%= @notification_template.summary_key %>
+</p>
+
+<p>
+  <strong>Body key:</strong>
+  <%= @notification_template.body_key %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @notification_template.classification %>
+</p>
+
+<%= link_to 'Edit', edit_notification_template_path(@notification_template) %> |
+<%= link_to 'Back', notification_templates_path %>

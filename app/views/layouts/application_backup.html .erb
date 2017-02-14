@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield(:google_maps_api) if content_for?(:google_maps_api) %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+</head>
+<body>
+<div id="header">
+  <%= link_to('Notifications', notifications_path) %>
+  <%= link_to(COMPANY_NAME, landing_page_path) %>
+  <%= link_to('Projects', projects_path) %>
+  <ul class="menu">
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+  </ul>
+
+  <% if @show_business_centre %>
+    <ul class="menu">Business Centre
+      <%= render 'business_centre/business_centre_menu' %>
+    </ul>
+  <% end %>
+</div>
+<!--Temporary links-->
+<%= link_to('Businesses', businesses_path) %>
+<%= link_to('Addresses', addresses_path) %>
+<%= link_to('Locations', locations_path) %>
+<%= link_to('Estimates', estimates_path) %>
+<%= link_to('Pictures', pictures_path) %>
+<%= link_to('Purchases', purchases_path) %>
+<%= link_to('Promo Codes', promo_codes_path) %>
+<%= link_to('Tags', tags_path) %>
+<%= link_to('Preferences', preferences_path) %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+  <%= yield %>
+  <!-- footer start -->
+  <div class="row">
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+        <ul class="footer-links-list">
+          <li>
+            <%= link_to('Contact Us', new_feedback_path) %>
+          </li>
+          <li>
+            <%= link_to('Privacy Policy', privacy_policy_path) %>
+          </li>
+          <li>
+            <%= link_to('Terms & Conditions', terms_and_conditions_show_path) %>
+          </li>
+        </ul>
+        <span class="copyright">
+            Copyright &copy; 2016 Quotr. All rights reserved.
+        </span>
+      </div>
+    </footer>
+  </div>
+  <!-- footer end -->
+</div>
+<!-- container-fluid end -->
+</body>
+</html>

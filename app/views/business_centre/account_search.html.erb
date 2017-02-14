@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Account Search</h1>
+
+<%= form_tag account_search_path, :method => 'get' do %>
+    <%= label_tag :first_name, "First name" %><%= text_field_tag :first_name, params[:first_name] %>
+    <%= label_tag :first_name, "Last name" %><%= text_field_tag :last_name, params[:last_name] %>
+    <%= label_tag :first_name, "Email" %><%= text_field_tag :email, params[:email] %>
+    <%= submit_tag "Search" %>
+    <%= link_to "Clear", account_search_path %>
+<% end %>
+
+<table>
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Last Login</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.first_name %></td>
+        <td><%= account.last_name %></td>
+        <td><%= account.email %></td>
+        <td><%= account.address.full_address %></td>
+        <td><%= account.last_sign_in_at %></td>
+        <td><%= link_to 'edit', edit_user_registration_path(account.id) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @accounts %>

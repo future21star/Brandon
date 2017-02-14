@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/*Functions*/
+$m-top: m-t !default;
+@for $i from 0 through 100 {
+  .#{$m-top}-#{$i} {
+    margin-top: $i+px !important;
+  }
+}
+
+$m-left: m-l !default;
+@for $i from 0 through 100 {
+  .#{$m-left}-#{$i} {
+    margin-left: $i+px !important;
+  }
+}
+
+$m-right: m-r !default;
+@for $i from 0 through 100 {
+  .#{$m-right}-#{$i} {
+    margin-right: $i+px !important;
+  }
+}
+
+$m-bottom: m-b !default;
+@for $i from 0 through 100 {
+  .#{$m-bottom}-#{$i} {
+    margin-bottom: $i+px !important;
+  }
+}
+
+
+$p-top: p-t !default;
+@for $i from 0 through 100 {
+  .#{$p-top}-#{$i} {
+    padding-top: $i+px !important;
+  }
+}
+
+$p-left: p-l !default;
+@for $i from 0 through 100 {
+  .#{$p-left}-#{$i} {
+    padding-left: $i+px !important;
+  }
+}
+
+$p-right: p-r !default;
+@for $i from 0 through 100 {
+  .#{$p-right}-#{$i} {
+    padding-right: $i+px !important;
+  }
+}
+
+$p-bottom: p-b !default;
+@for $i from 0 through 100 {
+  .#{$p-bottom}-#{$i} {
+    padding-bottom: $i+px !important;
+  }
+}
+
+
+
+/*
+ * Custom Checkbox/Radio
+ * ---------------------------
+ */
+.control {
+	font-size: 14px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 35px !important;
+	cursor: pointer;
+}
+.control.radio-inline{
+	display: inline-block;
+	padding-top: 0px;
+}
+.control-inline{
+	display: inline-block;
+}
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.control__indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border:1px solid #ddd;
+	font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	border-color: #dbba61;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: #dbba61;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: #dbba61;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity: .6;
+	background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+	content: "\f00c";
+	color: #fff;
+	top: 50%;
+	left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -8px;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+	top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+	border-radius: 50px;
+	background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+	background: #7b7b7b;
+}
+
+.scrollbox {
+    border-style: solid;
+    border-width: 1px;
+    max-height: 220px;
+    overflow: auto;
+    padding:15px;
+    margin-bottom: 30px;
+
+    h2{
+    	text-align: center;
+    	border-bottom: 1px solid #ddd;
+    	padding-bottom: 10px;
+    }
+    h3{
+    	color:#bd8b34;
+    }
+}

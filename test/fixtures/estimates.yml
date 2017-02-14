@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  summary: MyString
+  description: "test description that needs to be so long that it doesn't trigger the other validations"
+  price: 9.99
+  duration: 32
+  quote: one
+  quantifier: one
+
+two:
+  summary: MyString
+  description: "test description that needs to be so long that it doesn't trigger the other validations123"
+  price: 19.99
+  duration: 2
+  quote: two
+  quantifier: one

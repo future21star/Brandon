@@ -1,0 +1,63 @@
+
+-All static pages should use the same controller....or no controller at all, look how the error pages work
+-post-purchase bid creation needs to be batched if we provide the option of "bulk orders"
+-On registration if there is an error, the url changes and if you refresh you get a routing error
+-fog is uploading files into directories, we are only storing the file names, not the paths
+-Process that takes files from the servers directory and uploads them to the third party host and removes them from local space
+
+
+
+TODO
+=========
+-Admin list version of objects on lookup. Ability to "reify" them
+
+-remove most destroy actions
+
+-Suggest a tag feature
+-API calls that fail strong params check need to throw errors, currently send a 200 back
+-Tape measurements are in fractions....we should support fractions for measurements
+-Use paperclip to upload to S3, remove fog.
+
+-Weird problem when you reset/recreate the test database a bunch of tests from the commandline fail the first time but run fine every
+    subsequent run
+
+
+==================
+Testing gotchas
+==================
+1) React framework deprecated some core functionality in the libraries so the console in development fills with these warnings:
+    "application.self-880ce16….js?body=1:3260 Warning: You are manually calling a React.PropTypes validation function for the `debug`
+    prop on `Waypoint`. This is deprecated and will not work in the next major version. You may be seeing this warning due to a third-party
+    PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details."
+2) There is a problem with our picture handling so you will notice all images turn into 404 errors at certain points. This on the list of
+    things I need to investigate and fix.
+3) Weird problem when you reset/recreate the test database a bunch of tests from the commandline fail the first time but run fine every
+      subsequent run
+4) If you change routes and you are using Routes in your UI code, you must stop the server, clear the cache via "rake tmp:cache:clear" and
+    restart the server in order for js-routes to pick up the change.
+5) 
+
+
+
+Meta programming
+  def init(params)
+    params_to_attributes params
+    required_fields = [:project_id]
+    required_fields.each { |field|
+        throw = instance_variable_get("@#{field}") != nil
+      unless throw
+        raise ArgumentError.new "missing required parameter #{field}"
+      end
+    }
+  end
+
+  def params_to_attributes(params)
+    if params
+      params.each_key { |key|
+        class_eval {attr_accessor key}
+        instance_variable_set "@#{key}", params[key]
+      }
+    end
+  end
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  business: one
+  rating_definition: one
+  rating: 10
+  user: two
+  comments: MyText
+
+two:
+  business: one
+  rating_definition: two
+  user: two
+  rating: 1
+  comments: MyText

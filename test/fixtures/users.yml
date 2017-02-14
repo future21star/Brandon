@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: "admin@quotr.ca"
+  first_name: "ADmin"
+  last_name: "User"
+  encrypted_password: <%= User.new.send(:password_digest, 'testuser') %>
+  confirmed_at: 2016-06-30 16:57:56
+  address: one
+
+two:
+  email: "ghost@here.com"
+  first_name: "Business"
+  last_name: "User"
+  encrypted_password: <%= User.new.send(:password_digest, 'testuser') %>
+  confirmed_at: 2016-06-30 16:57:56
+  address: one
+
+regular:
+  email: "regular@user.here"
+  first_name: "Regular"
+  last_name: "User"
+  encrypted_password: <%= User.new.send(:password_digest, 'testuser') %>
+  confirmed_at: 2016-06-30 16:57:56
+  address: one
+
+

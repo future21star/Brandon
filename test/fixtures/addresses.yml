@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_number: 301
+  street_name: Mayview Cres
+  city: Waterloo
+  province: one
+  postal_code: n2v1p5
+  apartment: B
+
+

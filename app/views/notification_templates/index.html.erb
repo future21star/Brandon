@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Notification Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Summary key</th>
+      <th>Body key</th>
+      <th>Classification</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notification_templates.each do |notification_template| %>
+      <tr>
+        <td><%= notification_template.summary_key %></td>
+        <td><%= notification_template.body_key %></td>
+        <td><%= notification_template.classification %></td>
+        <td><%= link_to 'Show', notification_template %></td>
+        <td><%= link_to 'Edit', edit_notification_template_path(notification_template) %></td>
+        <td><%= link_to 'Destroy', notification_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Notification template', new_notification_template_path %>

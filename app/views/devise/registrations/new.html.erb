@@ -1,0 +1,41 @@
+<div class="signup-wrapper" style="background-image: url(<%=params[:business] ?  asset_url('signup-contractor.jpg') :  asset_url('signup-consumer.jpg') %>);">
+	<div class="container">
+		<%if params[:business] %>
+			<h2>Are you providing a service to the public and are looking for quality leads?</h2>
+
+			<h4>Whether a contractor, start-up company or an established business, Quotr will connect you with quality leads today. View the projects, review the criteria, make a quote and get the job started all within a couple of clicks. <br>
+
+			Become a member of Quotr and take control of your success today.</h4>
+			
+			<%else%>
+			<h2>Are you ready to find local gurus to complete all your projects?</h2>
+
+			<h4>Then you’re ready for a Quotr experience. Input the information, whether it’s for a renovation, service or luxury and get quotes from local companies and contractors today. There’s no runaround, hassle or wasted time. Just a couple clicks and you’re on your way to finding companies that suit your desires.<br> 
+
+			Oh, and don’t forget – Quotr is free! Sign up today and enjoy.</h4> 
+
+			<%end%>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+        <%if params[:business] %>
+            <h2 class="title">Start generating quality leads by quoting on projects today.</h2>
+				<% else %>
+            <h2 class="title">Sign up and post your project today.</h2>
+        <% end %>
+				<div class="signup-container">
+				
+	
+					<%= react_component 'RegistrationForm',
+  					{
+    					business_signup: @business_signup,
+					    countries: @countries,
+  					  provinces: @provinces,
+    					allTags: @tags,
+					    source: @source,
+  					}
+					%>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>

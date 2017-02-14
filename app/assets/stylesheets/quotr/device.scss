@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+@media screen and (min-width: 768px){
+	[name="captcha"]{
+   		width: 304px;
+   		margin: 0 auto;
+   }
+}
+@media screen and (max-width:1199px) {
+	.header-links li a, .right-links > li > a, .right-links li .dropdown > a {
+    	font-size: 14px;
+	}
+	.right-links > li > a, .right-links li .dropdown > a {
+  		padding: 19px 0px;
+ 	}
+ 	.middle-link {
+    	width: 295px;
+	}
+
+}
+@media screen and (max-width:992px) {
+	.sub-links ul{
+		float: none !important;
+		text-align: center;
+	}
+	.menu-btn{
+		display: block;
+	}
+	aside{
+		box-shadow: 5px 0 10px 0px rgba(0, 0, 0, 0.7);
+	}
+	aside .social-links {
+		display: table;
+		width: 100%;
+		padding: 0;
+		border-bottom: 1px solid #131313;
+	}
+	aside .social-links li{
+		display: table-cell;
+		width: 1%;
+		border: none;
+		text-align: center;
+	}
+	aside .social-links li a {
+		padding: 10px
+	}
+	
+}
+@media screen and (max-width:767px) {
+	.middle-link {
+    	width: 116px;
+	}
+	.header-links li .logo {
+	    padding: 8px 15px;
+	}
+	.notification{
+		font-size: 25px;
+		padding: 13px 13px 13px 15px;
+		line-height: 1em;
+	}
+	.box .box-heading h2 {
+    font-size: 30px;
+	}
+	.image{
+		padding: 100% 0;
+	}
+	
+	.content-wrapper {
+    	min-height: 300px;
+    }
+	.box {
+    	padding: 10px 0 20px;
+	}
+	.box .box-body p, .box .box-body ul, .box .box-body ol {
+    font-size: 15px;
+	}
+	.signup-wrapper h4{
+		padding: 0;
+	}
+
+	.package-listing {
+	   .dl-horizontal{
+			dt {
+        		width: 120px;
+        		float: left;
+			    overflow: hidden;
+			    clear: left;
+			    text-align: right;
+			    text-overflow: ellipsis;
+			    white-space: nowrap
+			}
+			dd{
+				margin-left: 130px;
+			}
+		}
+		
+	}
+	.profile-container{
+		.profile-avatar{
+			float: none;
+			text-align: center;
+		}
+		.user-details {
+		    margin-left: 0;
+		    text-align: center;
+		}
+	}
+	
+}
+@media screen and (max-width:599px) {
+	.navtabs-responsive{
+	    overflow-y: hidden;
+	    padding: 0;
+	    position: relative;
+	    -webkit-overflow-scrolling: touch;
+	    overflow-x: scroll;
+	}
+	.navtabs-custom .navtabs{
+		display: inline-block;
+	    position: relative;
+	    white-space: nowrap;
+	    overflow: hidden;
+	}
+	.form-group.error .validation-error{
+    	position:static;
+	}
+}
+@media screen and (max-width:479px) {
+	.box-container {
+		position: relative;
+	}
+	[name="captcha"]{
+	width: 240px;
+	transform:scale(0.79);
+	-webkit-transform:scale(0.79);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+
+	}
+ }

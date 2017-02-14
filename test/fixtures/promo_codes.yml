@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2016-06-29 15:29:32
+  end_date: 2016-06-30 15:29:32
+  category: discount_dollar
+  code: PromoCode1
+  discount: 9.99
+  description: MyString
+
+two:
+  start_date: 2016-06-27 15:29:32
+  end_date: 2016-06-29 15:29:32
+  category: discount_bids
+  code: MyString
+  discount: 9.99
+  description: MyString

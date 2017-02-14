@@ -1,0 +1,23 @@
+.container
+	#notice
+		%h5= notice
+	.page-header
+		%h1.text-gold Purchase History
+	=link_to 'Purchase Bids', purchases_packages_path
+	.table-responsive
+		%table.table.table-striped
+			%thead
+				%tr
+					%th Transaction
+					%th Date
+					%th Quantity
+					%th Total
+			%body
+				- @purchases.each do |purchase|
+					%tr
+						%td= purchase.transaction_id
+						%td= purchase.created_at
+						%td= purchase.package.quantity
+						%td
+							%b.text-gold
+								=number_to_currency(purchase.package.total, unit: '$')

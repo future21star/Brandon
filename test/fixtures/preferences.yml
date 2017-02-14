@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+news_letters:
+  name: News Letters
+
+promotions:
+  name: Promotions
+
+project_events:
+  name: Project Events
+
+purchase_events:
+  name: Purchase Events
+
+quote_events:
+  name: Quote Events

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  role_id: 1
+  user: one
+
+two:
+  role_id: 2
+  user: one
+
+another:
+  role_id: 3
+  user: one
+
+three:
+  role_id: 2
+  user: two
+
+business_three:
+  role_id: 3
+  user: two
+
+regular:
+  role_id: 2
+  user: regular

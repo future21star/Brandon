@@ -1,0 +1,77 @@
+%header.fixed-header
+	.container-fluid
+		.row.relative
+			/ Mobile menu toggle button
+			#showMobileMenu.menu-btn
+				%i.fa.fa-bars
+			/ /Mobile menu toggle button
+			/ Header Social links
+			.col-md-6.hidden-xs.hidden-sm
+				%ul.social-links.list-inline
+					%li
+						=link_to 'http://www.facebook.com/QuotrSupport',:target=>'_blank',:title => "Like us on Facebook" do
+							%i.fa.fa-facebook
+					%li
+						=link_to 'http://www.instagram.com/QuotrSupport',:target=>'_blank',:title => "Follow us on Instagram" do
+							%i.fa.fa-instagram
+			/ Header links
+			.middle-link
+				%ul.header-links.list-unstyled
+					%li.hidden-xs
+						=link_to "Projects",projects_path
+					%li
+						=link_to image_tag('logo-quotr.png',:alt => "quotr"),root_path,:class=>'logo'
+					%li.hidden-xs
+						=link_to "Blog","http://blog.quotr.ca/",:target=>'_blank'
+			/ Header Right links
+			.col-md-6.hidden-xs.hidden-sm
+				%ul.right-links.list-inline
+					-if user_signed_in? 
+						%li
+							.dropdown
+								%a#notification.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "javascript:void(0);"}
+									%i.fa.fa-bell
+								%ul.dropdown-menu{"aria-labelledby" => "notification"}
+									%li
+										%a{:href => "#"} Lorem ipsum dolor sit amet
+									%li
+										%a{:href => "#"} Lorem ipsum dolor sit amet
+									%li
+										%a{:href => "#"} Lorem ipsum dolor sit amet
+						%li
+							.dropdown{:id =>'user_menu'}
+								=link_to current_user.full_name,dashboard_path
+								%ul.dropdown-menu
+									%li
+										=link_to "Dashboard",dashboard_path
+									%li
+										=link_to "Profile",edit_user_registration_path
+									%li
+										=link_to "Purchasing",purchases_path
+
+						%li
+							=link_to "Log Out",destroy_user_session_path,method: :delete,:class=>'btn btn-gold'
+					-else
+						%li
+							=link_to "Register",new_user_registration_path
+						%li
+							=link_to "Business Sign Up",new_user_registration_path({business: true})
+						%li
+							=link_to "Log In",new_user_session_path,:class=>'btn btn-gold'
+					/ shows after login
+
+					/ /shows after login
+			/ Notification shown on mobile
+			-if user_signed_in? 
+				.notification.pull-right.hidden-sm.hidden-md.hidden-lg
+					.dropdown
+						%a#notification.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "javascript:void(0);"}
+							%i.fa.fa-bell
+						%ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "notification"}
+							%li
+								%a{:href => "#"} Lorem ipsum dolor sit amet
+							%li
+								%a{:href => "#"} Lorem ipsum dolor sit amet
+							%li
+								%a{:href => "#"} Lorem ipsum dolor sit amet
+				/ /Notification shown on mobile

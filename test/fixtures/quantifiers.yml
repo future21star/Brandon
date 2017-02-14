@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantifier: Day
+  category: time
+
+week:
+  quantifier: Week
+  category: time
+
+hours:
+  quantifier: Hours
+  category: time
+
+inchecs:
+  quantifier: Inches
+  category: distance
+
+feet:
+  quantifier: Feet
+  category: distance
+
+meters:
+  quantifier: Meters
+  category: distance
+
+width:
+  quantifier: Width
+  category: measurement
+
+length:
+  quantifier: Length
+  category: measurement
+
+height:
+  quantifier: Height
+  category: measurement

@@ -1,0 +1,20 @@
+<div class="section-bg">
+	<div class="container">
+		<div class="row m-t-45">
+	    <div class="col-sm-6 col-sm-offset-3 posted">
+				<div class="well text-center ">
+					<h2 class="text-gold m-t-0 m-b-20">Thank you!</h2>
+					<p>Your purchase of <strong class="text-gold"><%=number_to_currency(@purchase.total) %></strong> has been received. Your purchased bids will show up in your account shortly</p>
+					<br>
+					<%= link_to 'Back', purchases_packages_path, :class => 'btn btn-gold btn-flat btn-sm'%>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$('body').css('background-image','url(<%= asset_url('signup-successfull.jpg') %>)').addClass('bg-loaded');
+</script>
+

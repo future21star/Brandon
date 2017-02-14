@@ -1,0 +1,35 @@
+.bg-white.sub-links.hidden-xs
+  .container-fluid.clearfix
+    %ul.list-inline.pull-left
+      %li
+        =link_to "Businesses",businesses_path
+      %li
+        =link_to "Addresses", addresses_path 
+      %li
+        =link_to "Locations",locations_path
+      %li
+        =link_to "Estimates",estimates_path
+      %li
+        =link_to "Pictures",pictures_path
+      %li
+        =link_to "Purchases",purchases_path
+      %li
+        =link_to "Promo Codes",promo_codes_path
+      %li
+        =link_to "Tags",tags_path
+      %li
+        =link_to "Preferences",preferences_path
+    -if @show_business_centre
+      %ul.list-inline.pull-right
+        %li
+          =link_to "Account Search",account_search_path
+        %li
+          =link_to "Business Search",business_search_path
+
+
+
+
+
+
+
+

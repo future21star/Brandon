@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  a_file_name: MyString
+  a_content_type: image/jpeg
+  a_file_size: 53036
+  a_updated_at: 2016-07-16 03:43:32
+  generated_name: addaedr3qwd
+  user: one
+
+two:
+  a_file_name: MyString
+  generated_name: asda34wesfa
+  a_content_type: image/jpeg
+  a_file_size: 53036
+  a_updated_at: 2016-07-16 03:43:32
+  user: one

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  summary_key: 'Summary key 1'
+  body_key: 'This is the body of one'
+  classification: 1
+  preference: news_letters
+
+two:
+  summary_key: 'Summary key 1'
+  body_key: 'This is the body of 2'
+  classification: 2
+  preference: news_letters

@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  start_date: 2016-06-29
+  cut_off_date: 2016-06-29
+  entry_required: false
+  can_disturb: false
+  show_address: false
+  providing_materials: false
+  quantifier: one
+
+#two:
+#  project_id:
+#  start_date: 2016-06-29
+#  cut_off_date: 2016-06-29
+#  entry_required: false
+#  can_disturb: false
+#  show_address: false
+#  providing_materials: false

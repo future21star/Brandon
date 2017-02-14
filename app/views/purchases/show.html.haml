@@ -1,0 +1,22 @@
+.container
+	#notice
+	.page-header
+		%h5= notice
+	%h1.text-gold Purchase history
+	.row
+		.col-sm-6.col-sm-offset-3.m-t-30.m-b-30			
+			%dl.dl-horizontal.well
+				%dt Transaction:
+				%dd= @purchase.transaction_id
+				%dt Date:
+				%dd= @purchase.created_at
+				%dt Promo Code:
+				%dd= @purchase.promo_code_association ? @purchase.promo_code_association.code : ''
+				%dt Last 4 Digits:
+				%dd= @purchase.last_4
+				%dt Total :
+				%dd
+					%b.text-gold 
+						=number_to_currency(purchase.total, unit: '$')
+			.text-center
+				= link_to "Back", purchases_path,:class => "btn btn-gold btn-flat"

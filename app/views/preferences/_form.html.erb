@@ -1,0 +1,45 @@
+<%= form_for(@preference) do |f| %>
+  <% if @preference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@preference.errors.count, "error") %> prohibited this preference from being saved:</h2>
+
+      <ul>
+      <% @preference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.check_box :email %>
+  </div>
+  <div class="field">
+    <%= f.label :internal %><br>
+    <%= f.check_box :internal %>
+  </div>
+  <div class="field">
+    <%= f.label :news_letters %><br>
+    <%= f.check_box :news_letters %>
+  </div>
+  <div class="field">
+    <%= f.label :project_events %><br>
+    <%= f.check_box :project_events %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_events %><br>
+    <%= f.check_box :purchase_events %>
+  </div>
+  <div class="field">
+    <%= f.label :quote_events %><br>
+    <%= f.check_box :quote_events %>
+  </div>
+  <div class="field">
+    <%= f.label :promotions %><br>
+    <%= f.check_box :promotions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

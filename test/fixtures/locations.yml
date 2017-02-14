@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: one
+  latitude: 1.5
+  longitude: 1.5
+  visible: true
+
+two:
+  latitude: 1.4
+  longitude: 1.5
+  visible: true

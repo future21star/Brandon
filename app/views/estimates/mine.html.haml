@@ -1,0 +1,18 @@
+.container
+	#notice
+		%h5= notice
+	.page-header
+		%h1.text-gold Quotes
+	.row.grid-view
+		- @quotes.each do |quote|
+			.col-sm-6.col-md-4.col-lg-3
+				.grid-box
+					%dl
+						%dt Project
+						%dd= quote.project.title
+						%dt Type
+						%dd= quote.bid.category.name
+						%dt Date
+						%dd= quote.created_at
+					= link_to('Show', edit_quote_path(quote[:id]),:class => "btn btn-gold btn-block btn-flat")
+	= will_paginate @quotes

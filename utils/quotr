@@ -1,0 +1,52 @@
+#!/bin/sh
+
+export RAILS_ENV=production
+
+RUBY_VERSION=2.3.3
+PASSENGER_VERSION=5.0.30
+
+RUBY_PATH_NAME=ruby-$RUBY_VERSION
+HOME=/home/quotr
+RUBY_PATH=$HOME/.rvm/wrappers/$RUBY_PATH_NAME
+RUBY=$RUBY_PATH/ruby
+RVM=$HOME/.rvm
+
+PASSENGER_RUBY=$RUBY
+
+PASSENGER_PATH="$RVM/gems/$RUBY_PATH_NAME/wrappers/ruby $RVM/gems/$RUBY_PATH_NAME/gems/passenger-$PASSENGER_VERSION/bin"
+
+echo "Variables set"
+
+#$HOME/.rvm/bin/rvm use $RUBY_VERSION
+
+#PATH=$PATH:$HOME/.rvm/bin/rvm
+
+case "$1" in 
+        start)
+                echo "Starting server"
+                cd $HOME/app/current
+		:
+		$PASSENGER_PATH/passenger start -d
+                ;;
+        stop)
+                 echo "Stopping server"
+                 cd $HOME/app/current
+                 :
+                 $PASSENGER_PATH/passenger stop
+                 ;;
+        restart)
+                 echo "Restarting the server"
+                 cd $HOME/app/current
+                 $PASSENGER_PATH/passenger restart
+                 ;;
+
+        *)
+                echo "Usage: /etc/init.d/quotr {start|stop"}
+                exit 1
+                ;;
+esac
+
+echo "Finished"
+
+exit 0
+

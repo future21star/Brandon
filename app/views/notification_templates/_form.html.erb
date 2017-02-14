@@ -1,0 +1,29 @@
+<%= form_for(@notification_template) do |f| %>
+  <% if @notification_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@notification_template.errors.count, "error") %> prohibited this notification_template from being saved:</h2>
+
+      <ul>
+      <% @notification_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :summary_key %><br>
+    <%= f.text_field :summary_key %>
+  </div>
+  <div class="field">
+    <%= f.label :body_key %><br>
+    <%= f.text_field :body_key %>
+  </div>
+  <div class="field">
+    <%= f.label :classification %><br>
+    <%= f.number_field :classification %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+free:
+  name: "free"
+
+paid:
+  name: "paid"
+
+measurement:
+  name: "quantifier"
+
+rating_general:
+  name: "rating_general"
+
+time:
+  name: 'time'
+
+distance:
+  name: 'distance'
+
+measurement:
+  name: 'measurement'
+
+rating_general:
+  name: 'rating_general'
+
+discount_dollar:
+  name: 'discount_dollar'
+
+discount_bids:
+  name: 'discount_bids'

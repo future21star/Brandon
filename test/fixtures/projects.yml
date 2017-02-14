@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: 1
+  title: Kitchen reno needed
+  summary: What a great summary we are
+  description: >
+    Come gut this ktichen and rebuild it and make err purdy....polease!!!! Lotsa money$$$. We need this to be long
+    enough to pass validation
+  user: one
+  location: :two
+
+#two:

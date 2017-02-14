@@ -1,0 +1,50 @@
+!!!
+/[if IE 9] <html class="ie9" lang="en">
+/ [if !IE 9]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}/
+    %title Quotr
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    = favicon_link_tag 'favicon.ico', :rel => "shortcut icon"
+    = favicon_link_tag 'favicon.ico', :rel => "icon"
+    %meta{:content => "yes", :name => "mobile-web-app-capable"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700", :rel => "stylesheet"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'https://gstatic.com/charts/loader.js'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = yield(:google_maps_api) if content_for?(:google_maps_api)
+    = csrf_meta_tags
+    / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    / WARNING: Respond.js doesn't work if you view the page via file://
+    /[if lt IE 9]
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+  %body
+    %section.wrapper
+      / Mobile Menu
+      =render '/layouts/shared/mobile_menu'
+      / Header
+      =render '/layouts/shared/header'
+      / /Header
+      / Content overlay
+      .content-overlay
+      / /Content overlay
+      / Content wrapper
+      .content-wrapper
+        / Temporary links
+        =render '/layouts/shared/temporary_links'
+        / /Temporary links
+        .content
+          =yield
+          / /box-wrapper
+        / /Content
+      / /Content wrapper
+      / Footer
+      =render'/layouts/shared/footer'
+      / /Footer

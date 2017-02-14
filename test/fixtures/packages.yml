@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+zero:
+  name: MyString
+  quantity: 0
+  price_per_unit: 100
+  total: 0
+
+one:
+  name: MyString
+  quantity: 1
+  price_per_unit: 0.25
+  total: 0.25
+
+two:
+  name: MyString
+  quantity: 1
+  price_per_unit: 0.25
+  total: 0.25
+
+three:
+  name: MyString
+  quantity: 3
+  price_per_unit: .5
+  total: 1.50
+
+tenner:
+  name: MyString
+  quantity: 10
+  price_per_unit: 0.25
+  total: 2.50
